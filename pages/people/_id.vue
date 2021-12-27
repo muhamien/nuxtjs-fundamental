@@ -10,3 +10,12 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  validate(request) {
+    // Must be a number
+    return /^\d+$/.test(request.params.id)
+  }
+}
+</script>
